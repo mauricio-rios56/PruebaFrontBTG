@@ -1,0 +1,116 @@
+/* ── Base de Tailwind ───────────────────────────────────────────────────────── */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Reset base ─────────────────────────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { font-family: 'Inter', system-ui, sans-serif; }
+
+  /* Estilo de scrollbar para tema oscuro */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #0d1117; }
+  ::-webkit-scrollbar-thumb { background: #30363d; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #4a5568; }
+
+  /* Oculta las flechas del input numérico */
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+  input[type='number'] { -moz-appearance: textfield; }
+}
+
+/* ── Clases reutilizables de componentes ───────────────────────────────────── */
+@layer components {
+
+  /* Tarjetas */
+  .card {
+    @apply bg-surface-card border border-surface-border rounded-2xl p-5 shadow-card;
+  }
+  .card-glow {
+    @apply shadow-glow border-btg-800/60;
+  }
+
+  /* Navegación */
+  .nav-link {
+    @apply flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-gray-400
+           hover:text-white hover:bg-surface-border transition-colors
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-btg-400 focus-visible:ring-offset-2 focus-visible:ring-offset-surface;
+  }
+  .nav-link-active {
+    @apply text-btg-300 bg-btg-950 hover:bg-btg-950;
+  }
+
+  /* Botones */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2
+           bg-btg-500 hover:bg-btg-400 active:bg-btg-600
+           text-white font-semibold rounded-xl
+           transition-colors duration-150
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-btg-300 focus-visible:ring-offset-2 focus-visible:ring-offset-surface
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2
+           bg-surface-border hover:bg-surface-muted
+           text-white font-semibold rounded-xl
+           transition-colors duration-150
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-btg-300 focus-visible:ring-offset-2 focus-visible:ring-offset-surface
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2
+           bg-red-900/40 hover:bg-red-800/60 border border-red-800
+           text-red-300 font-semibold rounded-xl
+           transition-colors duration-150
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-300 focus-visible:ring-offset-2 focus-visible:ring-offset-surface
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* Campos de formulario */
+  .field-label {
+    @apply block text-xs font-semibold text-gray-400 uppercase tracking-wider;
+  }
+  .field-input {
+    @apply w-full bg-surface border border-surface-border rounded-xl
+           px-3 py-2.5 text-sm text-white placeholder-gray-600
+           focus:outline-none focus:ring-2 focus:ring-btg-500 focus:border-transparent
+           focus-visible:ring-btg-300 focus-visible:ring-offset-2 focus-visible:ring-offset-surface
+           transition-shadow;
+  }
+  .field-error {
+    @apply text-xs text-red-400 flex items-center gap-1;
+  }
+
+  /* Etiquetas */
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded-md text-xs font-semibold;
+  }
+  .badge-fpv {
+    @apply bg-btg-950 text-btg-300 border border-btg-800;
+  }
+  .badge-fic {
+    @apply bg-violet-950 text-violet-300 border border-violet-800;
+  }
+  .badge-risk-low  { @apply bg-emerald-950 text-emerald-400 border border-emerald-800; }
+  .badge-risk-mid  { @apply bg-amber-950   text-amber-400   border border-amber-800;   }
+  .badge-risk-high { @apply bg-red-950     text-red-400     border border-red-800;     }
+
+  /* Indicadores KPI */
+  .kpi-label {
+    @apply text-xs font-medium text-gray-500 uppercase tracking-widest;
+  }
+  .kpi-value {
+    @apply text-2xl font-bold mt-1 leading-none;
+  }
+  .kpi-sub {
+    @apply text-xs text-gray-600 mt-1;
+  }
+
+  /* Spinner */
+  .spinner-sm {
+    @apply inline-block w-3.5 h-3.5 border-2 border-current border-t-transparent
+           rounded-full animate-spin;
+  }
+}

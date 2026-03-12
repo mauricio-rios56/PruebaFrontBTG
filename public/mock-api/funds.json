@@ -1,0 +1,47 @@
+[
+  {
+    "id": "FPV_BTG_PACTUAL_RECAUDADORA",
+    "name": "FPV BTG Pactual Recaudadora",
+    "minAmount": 75000,
+    "category": "FPV",
+    "description": "Fondo en pesos con alta liquidez diaria, ideal para excedentes de tesorería.",
+    "riskLevel": "Bajo",
+    "returnRate": 11.5
+  },
+  {
+    "id": "FPV_BTG_PACTUAL_ECOPETROL",
+    "name": "FPV BTG Pactual Ecopetrol",
+    "minAmount": 125000,
+    "category": "FPV",
+    "description": "Portafolio diversificado con exposición al sector energético colombiano.",
+    "riskLevel": "Medio",
+    "returnRate": 13.2
+  },
+  {
+    "id": "DEUDAPRIVADA",
+    "name": "FPV BTG Pactual Deuda Privada",
+    "minAmount": 50000,
+    "category": "FIC",
+    "description": "Inversión en instrumentos de deuda privada con retornos superiores al mercado.",
+    "riskLevel": "Medio",
+    "returnRate": 14.8
+  },
+  {
+    "id": "FDO-ACCIONES",
+    "name": "FIC BTG Pactual Renta Variable",
+    "minAmount": 250000,
+    "category": "FIC",
+    "description": "Exposición al mercado accionario colombiano e internacional.",
+    "riskLevel": "Alto",
+    "returnRate": 18.5
+  },
+  {
+    "id": "FPV_BTG_PACTUAL_DINAMICA",
+    "name": "FPV BTG Pactual Dinámica",
+    "minAmount": 100000,
+    "category": "FPV",
+    "description": "Fondo dinámico con estrategia activa de gestión en renta fija local.",
+    "riskLevel": "Bajo",
+    "returnRate": 12.1
+  }
+]
