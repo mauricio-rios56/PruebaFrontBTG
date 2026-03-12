@@ -4,6 +4,12 @@ Aplicación web desarrollada en Angular para la gestión de fondos FPV/FIC en el
 
 El objetivo de la solución es permitir que un usuario único consulte el catálogo de fondos disponibles, se suscriba validando saldo y monto mínimo, cancele participaciones activas y revise el historial de transacciones con una experiencia clara y responsiva.
 
+## Demo visual
+
+<p align="center">
+  <img src="docs/assets/PruebaFront.gif" alt="Demo BTG Funds" width="900" />
+</p>
+
 ## Alcance funcional
 
 - Visualización de fondos disponibles.
